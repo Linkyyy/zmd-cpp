@@ -1,0 +1,10 @@
+<view class="tabs">
+    <view class="tab_title">
+        <view wx:for="{{tabs}}" wx:key="id" class="title_item {{item.isActive?'active':''}}">
+        {{item.name}}
+        </view>
+    </view>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+    {{aaa}}
+</view>
