@@ -1,9 +1,0 @@
-/* pages/text/text.wxss */
-swiper{
-    width: 100%;
-    height: calc(100vw * 352 / 1125);
-}
-image{
-    width: 100%;
-    height: 100%;
-}

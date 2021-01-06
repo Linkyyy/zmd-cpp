@@ -1,5 +1,0 @@
-<!--pages/navigation/navigation.wxml-->
-<Tabs aaa="123.54"></Tabs>
-<text >
-{{aaa}}
-</text>
