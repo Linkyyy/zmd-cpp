@@ -1,0 +1,35 @@
+<!--components/navBar/navBar.wxml-->
+  <!--导航栏  -->
+<view class="bar-view">
+    <!-- 状态栏 -->
+    <view class="weight statuColumn" style="height:{{nav.statusBarHeight}};background-color:{{nav.stateColor}}"></view>
+    <!-- 标题栏 -->
+    <view class="titleColumn" style="height:{{nav.titleBarHeight}}">
+            <!-- 模式0 除了状态栏，其他自定义-->
+      <slot wx:if="{{nav.mode==0}}">
+      </slot>
+            <!-- 模式1 参考个人中心-->
+      <view class="view_titleBarA" bindtap="handleTap" wx:if="{{nav.mode==1}}" style="background-color:{{nav.titleColor}}">
+        <view class="titleBarA_main">
+          <image src="{{nav.image}}"></image>
+           <text>{{nav.text}}</text>
+        </view>
+      </view>
+
+            <!-- 模式2 参考更多设置-->
+      <view class="view_titleBarB"  wx:if="{{nav.mode==2}}" style="background-color:{{nav.titleColor}}">
+        <view  wx:if="{{nav.Backmode==1}}" class="titleBarB_left" bindtap="handleTap">
+           <text> {{'<'}}返回</text>
+        </view>
+        <view class="{{nav.Backmode==0?'titleB_mid_two':'titleB_mid'}}">
+          <text>{{nav.title}}</text>
+        </view>
+      </view>
+
+
+    </view>
+
+</view>
+  <!-- 占位 -->
+<view style="height: {{nav.titleBarHeight}};padding-top:{{nav.statusBarHeight}}">
+</view>

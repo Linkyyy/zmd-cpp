@@ -1,0 +1,73 @@
+/* components/navBar/navBar.wxss */
+.bar-view{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width:750rpx;
+  top:0;
+  left:0;
+  z-index:100;
+
+}
+/* 状态栏样式 */
+.statuColumn{
+  width:100%;
+  text-align: center; 
+}
+/* 标题栏*/
+.titleColumn{
+  overflow: hidden;
+}
+.view_titleBarA {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.view_titleBarA .titleBarA_main {
+  margin-left: 20rpx;
+  border-radius: 40rpx;
+  padding: 8rpx 20rpx;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+.view_titleBarA .titleBarA_main image {
+  margin-right: 5rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.view_titleBarB {
+  color: #ddd;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.titleBarB_left{
+  margin-left: 7rpx;
+  font-size: 32rpx;
+}
+.titleB_mid{
+  font-size: 40rpx;
+  font-weight: bold;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.titleB_mid_two{
+  font-size: 40rpx;
+  font-weight: bold;
+  position: absolute;
+  left: 43%;
+  background-color: transparent;
+  color: #555;
+}
+
+
+
