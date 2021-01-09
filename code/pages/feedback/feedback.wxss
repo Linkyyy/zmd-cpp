@@ -1,0 +1,65 @@
+/* pages/feedback/feedback.wxss */
+page {
+  height: 100%;
+  background-color: #F4F4F4;
+}
+.view_submit {
+  background-color: #46A86B;
+  margin: 20rpx auto;
+  border-radius: 50%;
+  width: 120rpx;
+  height: 120rpx;
+}
+.view_submit image {
+  position: relative;
+  top: 13rpx;
+  width: 88%;
+  height: 88%;
+}
+.view_feedback {
+  box-shadow: 0 0 15rpx 1rpx #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30rpx;
+  margin: 30rpx auto;
+  width: 90%;
+  height: 70%;
+  background-color: white;
+}
+.view_feedback .feedback_top {
+  padding: 25rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: white;
+  border-radius: 30rpx 30rpx 0rpx 0rpx;
+  background-color: #46A86B;
+}
+.view_feedback .feedback_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  margin: 20rpx;
+}
+.view_feedback .feedback_main input {
+  padding: 20rpx;
+}
+.view_feedback .feedback_main textarea {
+  width: 92%;
+  padding: 30rpx;
+}
+.view_feedback .feedback_main .input_content {
+  text-align: center;
+  flex: 1;
+}
+.view_feedback .feedback_main .input_name {
+  bottom: 10rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.view_feedback .feedback_main .input_score {
+  text-align: center;
+}

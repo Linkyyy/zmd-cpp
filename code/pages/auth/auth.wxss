@@ -1,0 +1,67 @@
+/* pages/auth/auth.wxss */
+page {
+  height: 100%;
+}
+.view_auth {
+  background-color: #F4F4F4;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.view_auth .auth_top {
+  font-size: 37rpx;
+  font-weight: bold;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.view_auth .auth_top image {
+  height: 200rpx;
+  width: 200rpx;
+}
+.view_auth .auth_mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+}
+.view_auth .auth_mid input {
+  margin: 20rpx;
+  border-radius: 60rpx;
+  background-color: white;
+  text-align: center;
+  width: 80%;
+  height: 15%;
+}
+.view_auth .auth_mid image {
+  margin-top: 50rpx;
+  height: 160rpx;
+  width: 160rpx;
+}
+.view_auth .auth_bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+  overflow: hidden;
+}
+.view_auth .auth_bottom text:nth-child(1) {
+  color: #444444;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.view_auth .auth_bottom text:nth-child(2) {
+  margin-top: 20rpx;
+  width: 80%;
+  font-size: 25rpx;
+  color: #616161;
+}
+.view_auth .auth_bottom text:nth-child(3) {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 50rpx;
+  font-size: 20rpx;
+  color: #616161;
+}

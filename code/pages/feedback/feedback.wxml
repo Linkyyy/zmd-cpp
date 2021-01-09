@@ -1,0 +1,24 @@
+<!--pages/feedback/feedback.wxml-->
+<navBar bindClick="handleBack" nav="{{navSet}}"></navBar>
+
+<view class="view_feedback">
+
+  <view class="feedback_top">
+    <text>反馈单</text>
+
+  </view>
+
+  <view class="feedback_main">
+    <textarea class="input_content" placeholder="写下你的反馈"/>
+    <input type="number" maxlength="2" class="input_score" placeholder="写下你的评分（1-10分）"/>
+    <input class="input_name"  placeholder="写下你的名字与联系方式"/>
+  </view>
+
+</view>
+<view class="view_submit">
+  <image src="/images/zhifeiji.svg"></image>
+</view>
+
+
+
+  

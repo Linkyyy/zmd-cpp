@@ -1,0 +1,77 @@
+<!--pages/user/user.wxml-->
+<navBar nav="{{navSet}}" bindClick="handleSet">
+
+</navBar>
+<view class="view_user">
+    <view class="user_top">
+      <view class="triangle {{userinfo.avatarUrl?'triangle_login':''}}" ></view> 
+      <view class="view_name view_vname"  wx:if="{{userinfo.avatarUrl}}" bindtap="hanleName" style="animation-name:{{displayMode?'vName_reverse':'vName'}} ; animation-delay:{{!displayMode?'0':'0.5s'}}">
+        <text class="text_username">{{userinfo.nickName}}</text>
+        <text class="text_auth">（未认证）</text>
+      </view>
+      <view class="view_name view_rname" wx:if="{{userinfo.avatarUrl}}" bindtap="hanleName" style="animation-name:{{displayMode?'rName_reverse':'rName'}}; animation-delay:{{displayMode?'0':'0.5s'}};">
+        <text class="text_hello">{{helloText}}</text>
+        <text class="text_rName">黄文旺</text>
+      </view>
+
+      <button open-type="getUserInfo" bindgetuserinfo="handleGetUI" wx:if="{{!userinfo.avatarUrl}}">登录</button>
+      <!-- <view class="triangle {{userinfo.avatarUrl?'':'triangle_unlogin'}}" ></view> -->
+      <!-- <view class="triangle_shadow {{userinfo.avatarUrl?'':'triangle_unlogin'}}" ></view> -->
+      <view class="view_circle circle1" wx:if="{{userinfo.avatarUrl}}" style="animation-play-state:{{isPlay?'running':'paused'}}"></view>
+      <view class="view_circle circle2" wx:if="{{userinfo.avatarUrl}}" style="animation-play-state:{{isPlay?'running':'paused'}}"></view>
+      <view class="view_circle circle3" wx:if="{{userinfo.avatarUrl}}" style="animation-play-state:{{isPlay?'running':'paused'}}"></view>
+      <view class="view_tx" wx:if="{{userinfo.avatarUrl}}">
+        <view class="view_image" bindtap="handlePlay">
+          <image src="{{userinfo.avatarUrl}}">
+        </image>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="user_mid">
+      <navigator class="view_history">
+        <image src="/images/huangguan.png"></image>
+        <text>我的收藏</text>
+      </navigator>
+      <navigator class="view_followed">
+        <image src="/images/zhifeiji.png"></image>
+        <text>我的关注</text>
+      </navigator>
+      <navigator class="view_friend">
+        <image src="/images/pengyou.png"></image>
+        <text>我的伙伴</text>
+      </navigator>
+    </view>
+
+    
+    <view class="user_bottom">
+      <view class="view_auth" bindtap="handleAuth">
+        <image src="/images/shenfen.png"></image>
+        <text>身份认证</text>
+      </view>
+      <view class="view_team">
+        <image src="/images/tuandui.png"></image>
+        <text>团队认证</text>
+      </view>
+      <view class="view_color">
+        <image src="/images/yanse.png"></image>
+        <text>更换配色</text>
+      </view>
+
+      <view class="view_contact">
+        <image src="/images/lianxi.png"></image>
+        <text>联系客服</text>
+      </view>
+      <view class="view_feedback" bindtap="handleFeedback">
+        <image src="/images/fankui.png"></image>
+        <text>意见反馈</text>
+      </view>
+      <view class="view_about">
+        <image src="/images/about.png"></image>
+        <text>关于我们</text>
+      </view>
+
+      
+    </view>
+</view>

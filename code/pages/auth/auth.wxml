@@ -1,0 +1,19 @@
+<view class="view_auth">
+  <navBar bindClick="handleBack" nav="{{navSet}}"></navBar>
+  <view class="auth_top">
+    <image src="/images/yonghu.svg"></image>
+    <text>登录教务系统</text>
+  </view>
+
+  <view class="auth_mid">
+    <input maxlength="12" type="number" placeholder="学号"/>
+    <input password="true" maxlength="15" placeholder="密码"/>
+    <image src="/images/login.svg"></image>
+  </view>
+
+  <view class="auth_bottom">
+    <text>登录说明</text>
+    <text>  本服务由新思路CPP组开发，登录后视为向CPP组授权，我们可能会获取某些个人隐私信息，请谨慎登录。</text>
+    <text>最终解释权归CPP组所有</text>
+  </view>
+</view>

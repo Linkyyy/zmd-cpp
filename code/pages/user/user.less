@@ -1,0 +1,264 @@
+/* pages/user/user.wxss */
+page{
+    background-color: #F4F4F4;
+}
+.view_titleBar{
+    color: white;
+    height: 100%;
+    background-color: #46A86B;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .view_main{
+        margin-left: 20rpx;
+        border-radius: 40rpx;
+        padding: 8rpx 20rpx;
+        font-size: 32rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.25);
+        image{
+            margin-right: 5rpx;
+            width: 32rpx;
+            height: 32rpx;
+        }
+    }
+}
+.view_user{
+    z-index: 2;
+    background-color: #F4F4F4;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: column;
+    image{
+        width: 60rpx;
+        height: 60rpx;
+    }
+    .user_top{
+        overflow: hidden;
+        position: relative;
+        height: 18vh;
+        background-color:transparent;
+        .triangle{
+            z-index: 0;
+            position: absolute;
+            bottom: 10rpx;
+            width: 120%;
+            height: 100%;
+            background-color: #46A86B;
+            transform-origin: left bottom;
+            box-shadow: 0 0 15rpx 1rpx #46A86B;
+        }
+        .triangle_login{
+            transform: rotate(-10deg);
+        }
+        button{
+            position: relative;
+            top: 40rpx;
+        }
+        
+        .view_name{
+            position: absolute;
+            z-index: 999;
+            margin-top: 20rpx;
+            width: 300rpx;
+            margin-left: 20rpx;
+            float: left;
+            text-align: center;
+            .text_username{
+                font-weight: bold;
+                display: block;
+                font-size: 50rpx;
+                color:white;
+            }
+            .text_auth{
+                font-size: 25rpx;
+                color:rgb(250, 250, 250);
+            }
+            .text_hello{
+                font-size: 35rpx;
+                color:rgb(250, 250, 250);
+            }
+            .text_rName{
+                font-weight: bold;
+                display: block;
+                font-size: 50rpx;
+                color: white;
+            }
+        }
+        //名字栏翻转动画
+        @keyframes vName {
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(90deg);
+            }
+        }
+        @keyframes vName_reverse{
+            from{
+                transform: rotateY(90deg);
+            }
+            to{
+                transform: rotateY(0deg);
+            }
+        }
+        @keyframes rName {
+            from{
+                transform: rotateY(90deg);
+            }
+            to{
+                transform: rotateY(0deg);
+            }
+        }
+        @keyframes rName_reverse{
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(90deg);
+            }
+        }
+        .view_vname{
+            transform: rotateY(90deg);
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+            animation-duration: 0.5s;
+        }
+        .view_rname{
+            transform: rotateY(90deg);
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+            animation-duration: 0.5s;
+        }
+        //水波效果
+        @keyframes circle {
+            0%{
+                opacity: 0.4;
+            }
+            25%{
+                opacity: 0.2;
+            }
+            50%{
+                opacity: 0.1;
+            }
+            75%{
+                opacity: 0.05;
+            }
+            100% {
+                transform: scale(5);
+                opacity: 0;
+            }
+        }
+
+        .view_circle{
+            animation-name: circle;
+            animation-duration: 8s;
+            animation-iteration-count:infinite;
+            animation-timing-function: ease-out;
+            width: 180rpx;
+            height: 180rpx;
+            border-radius: 50%;
+            background-color:rgba(243, 243, 243);
+            right: 66rpx;
+            top: 193rpx;
+            position: fixed;
+            z-index: 999;
+        }
+        .circle1{
+            animation-delay: 0s;
+        }
+        .circle2{
+            animation-delay: 2s;
+        }
+        .circle3{
+            animation-delay: 4s;
+        }
+        .view_tx{
+            right: 53rpx;
+            top: 180rpx;
+            border-radius: 50%;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            .view_image{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color:rgba(255, 255, 255, 0.75);
+                width: 206rpx;
+                height: 206rpx;
+                image{
+                    border-radius: 50%;
+                    width: 185rpx;
+                    height: 185rpx;
+                    z-index:999;
+                }
+
+            }
+        }
+
+    }
+    .user_mid{
+        @keyframes op {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        height: 12vh;
+        position: relative;
+        z-index: 999;
+        margin: 25rpx;
+        margin-top: 20rpx;
+        font-size: 24rpx;
+        display: flex;
+        flex-direction: row;
+        navigator{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+        text{
+            margin: 10rpx 0;
+        }
+    }
+    .user_bottom{
+        margin-top: 30rpx;
+        display: flex;
+        flex-direction: column;
+        view{
+            image{
+                height: 50rpx;
+                width: 50rpx;
+            }
+            text{
+                position: relative;
+                bottom: 15rpx;
+                margin: 0 50rpx;
+            }
+            margin: 5rpx 60rpx;
+            padding: 15rpx;
+            &:after{
+                content: '';
+                display: block;
+                width: 100%;
+                background-color:gainsboro;
+                height: 5rpx;
+                transform: scaleY(0.1);
+                z-index: 5;
+            }
+        }
+        .view_contact{
+            margin-top: 35rpx;
+        }
+    }
+}
